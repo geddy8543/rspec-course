@@ -7,4 +7,14 @@ RSpec.describe Hash do
         expect(subject.length).to eq(2)
         expect(bob.length).to eq(2)
     end
+
+    # 'child' block can access parent subject from above
+    describe 'nested example' do
+        it 'has two key-value pairs' do
+            expect(subject.length).to eq(2)
+        expect(bob.length).to eq(2)
+        end
+    end
+
+
 end
